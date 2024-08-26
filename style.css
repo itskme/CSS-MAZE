@@ -29,3 +29,36 @@ b {
   container-name: b;
 }
 
+@keyframes x {
+  to {
+    --x: 9;
+  }
+}
+@keyframes y {
+  to {
+    --y: 4;
+  }
+}
+m {
+  content: "";
+  position: absolute;
+  translate: calc(var(--x)*100%) calc(var(--y)*100%);
+  width: 60px;
+  aspect-ratio: 1;
+  opacity: 0;
+  background: url(brocc.png) center/cover;
+}
+
+b:after {
+  content: "TIME - " counter(s1, decimal-leading-zero) "s";
+  white-space: pre-wrap;
+  color: #fefeff;
+  font-size: 35px;
+  visibility: hidden;
+  font-variant-numeric: tabular-nums;
+  counter-reset: s1 var(--s1);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -60px;
+}

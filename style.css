@@ -117,3 +117,34 @@ body {
   cursor: pointer;
 }
 
+b:before {
+  content: "get the broccoli in the bowl\awithout touching the wall\a(it will be contaminated)\a\aUse your keyboard to move\a\a click to start";
+  font-size: 30px;
+  white-space: pre;
+  text-align: center;
+  position: absolute;
+  inset: 0 0 -60px;
+  padding-top: 20px;
+  pointer-events: none;
+  z-index: 5896;
+  color: #fefeff;
+  background-color: black;
+}
+
+body:focus-within {
+  cursor: none;
+}
+
+body:focus-within b:before {
+  opacity: 0;
+}
+
+body:focus-within m {
+  opacity: 1;
+}
+
+body:focus-within b:after {
+  visibility: visible;
+  animation-play-state: paused, running;
+}
+

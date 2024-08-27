@@ -148,3 +148,32 @@ body:focus-within b:after {
   animation-play-state: paused, running;
 }
 
+html {
+  font-family: system-ui, sans-serif;
+  font-weight: 900;
+  min-height: 100vh;
+  overflow: hidden;
+  display: grid;
+  --c1: #000000;
+  --b: #6c6c6c;
+  background: #ced4da;
+  overflow: hidden;
+}
+
+@media (width < 660px), (height < 360px) {
+  html:after {
+    content: "your screen is too small for this game bud";
+    white-space: pre-wrap;
+    background: var(--b);
+    position: absolute;
+    inset: 0;
+    z-index: calc(infinity);
+    display: grid;
+    place-content: center;
+    text-align: center;
+    font-size: 40px;
+    padding: 40px;
+    color: #fff;
+    background-color: #000000;
+  }
+}

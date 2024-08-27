@@ -86,3 +86,34 @@ b:after {
   }
 }
 
+@keyframes f {
+  1%, to {
+    content: var(--_c, "\agame over\a\arefresh the page\a and try again ");
+    font-size: 40px;
+    background: var(--b);
+    inset: 0 0 -60px;
+  }
+}
+@keyframes s1 {
+  to {
+    --s1:60;
+  }
+}
+g {
+  display: block;
+  width: 960px;
+  height: 520px;
+}
+
+body {
+  position: relative;
+  margin: auto auto 70px;
+  overflow: auto;
+  scrollbar-width: none;
+  width: 600px;
+  height: 360px;
+  border: 5px solid var(--c1);
+  background: var(--c1);
+  cursor: pointer;
+}
+
